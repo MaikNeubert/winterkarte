@@ -26,26 +26,44 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 let orgElement = document.getElementById('organizations');
 
+function formatOpeningHours(openingHours) {
+    if (!openingHours) return '';
+    return openingHours.map(oh => `${oh.day}: ${oh.times.join(', ')}`).join('<br>');
+}
+
+function formatDuration(duration) {
+    if (!duration) return '';
+    return `Sammelzeitraum: ${duration.from} - ${duration.to}`;
+}
+
 if (viewerLocation === 'germany' || viewerCity === undefined) {
-    // alle Städte anzeigen
+    // Städte-Übersicht
     for (let city of cities) {
         let marker = L.marker(city.latLong, { icon: collectionPointMarker }).addTo(map);
         marker.bindPopup(`<b>${city.name}</b><br><a href="index.html?location=${city.url}">Sammelstellen anzeigen</a>`);
     }
 } else {
-    // Sammelstellen der Stadt anzeigen
-    for (let cp of viewerCity.collectionPoints) {
-        let marker = L.marker(cp.latLong, { icon: collectionPointMarker }).addTo(map);
-        marker.bindPopup(`<b>${cp.name}</b>`);
-    }
-
-    // Liste der Sammelstellen rendern
+    // Sammelstellen-Ansicht
     orgElement.innerHTML = `<h2>Sammelstellen in ${viewerCity.name}</h2>`;
     let ul = document.createElement('ul');
+
     for (let cp of viewerCity.collectionPoints) {
+        let marker = L.marker(cp.latLong, { icon: collectionPointMarker }).addTo(map);
+
+        let popupContent = `<b>${cp.name}</b>`;
+        if (cp.organization) popupContent += `<br>${cp.organization}`;
+        if (cp.openingHours) popupContent += `<br>${formatOpeningHours(cp.openingHours)}`;
+        if (cp.duration) popupContent += `<br>${formatDuration(cp.duration)}`;
+        marker.bindPopup(popupContent);
+
+        // Liste
         let li = document.createElement('li');
-        li.textContent = cp.name;
+        li.innerHTML = `<b>${cp.name}</b>`;
+        if (cp.organization) li.innerHTML += `<br>${cp.organization}`;
+        if (cp.openingHours) li.innerHTML += `<br>${formatOpeningHours(cp.openingHours)}`;
+        if (cp.duration) li.innerHTML += `<br>${formatDuration(cp.duration)}`;
         ul.appendChild(li);
     }
+
     orgElement.appendChild(ul);
 }
