@@ -19,7 +19,7 @@ var cities = [
       },
       {
         "name": "KHG",
-        "organization": "HERMINE e.V.",
+        "organization": "HERMINE e. V.",
         "address": {
           "street": "Hofstallstr.",
           "house": "4",
@@ -34,7 +34,8 @@ var cities = [
       },
       {
         "latLong": [49.8008, 9.9717],
-        "name": "RockInn Boulderhalle"
+        "name": "RockInn Boulderhalle",
+        "organization": "HERMINE e. V."
       }
     ]
   },
@@ -44,8 +45,8 @@ var cities = [
     "latLong": [51.51, 7.46],
     "collectionPoints": [
       {
-        "name": "Grenzenlose Wärme e.V.",
-        "organization": "Grenzenlose Wärme",
+        "name": "Grenzenlose Wärme e. V.",
+        "organization": "Grenzenlose Wärme e. V.",
         "address": {
           "street": "Kanalstrasse 25, Halle 51",
           "house": "25",
@@ -65,8 +66,8 @@ var cities = [
     "latLong": [52.76, 13.64],
     "collectionPoints": [
       {
-        "name": "Wir packen's an e.V.",
-        "organization": "Wir packen's an",
+        "name": "Wir packen's an e. V.",
+        "organization": "Wir packen's an e. V.",
         "address": {
           "street": "Bahnhofstr.",
           "house": "81 a",
@@ -85,22 +86,74 @@ var cities = [
 ];
 
 
-
-
 var organizations = [
     {
         "name": "HERMINE e. V.",
         "cities": ["Würzburg"],
-        "supportedOrganisations": ["RWC", "SV", ""],
+        "supportedOrganisations": ["RWC", "SV", "CA", "JNRC"],
     },
     {
         "name": "Grenzenlose Wärme e. V.",
         "cities": ["Dortmund"],
-        "supportedOrganisations": ["RWC", "SV"],
+        "supportedOrganisations": ["RWC"],
     },
         {
-        "name": "Wir packen's an e.V.",
+        "name": "Wir packen's an e. V.",
         "cities": ["Biesenthal"],
-        "supportedOrganisations": ["RWC", "SV"],
+        "supportedOrganisations": ["RWC", "SV", "JA", "CA", "NNK", "MRS"],
     },
+    {
+        "name": "Elpida",
+        "citires": ["Leipzig", "Berlin"],
+        "supportedOrganisations": ["SV"]
+    }
+]
+
+var supportedOrganisations = [
+    {
+        "id": "RWC",
+        "name": "Refugee Woman Center",
+        "country": "Frankreich",
+        "region": "Calais"
+    },
+    {
+        "id": "SV",
+        "name": "Samos Volunteers",
+        "country": "Griechenland",
+        "region": "Samos"
+    },
+    {
+        "id": "CA",
+        "name": "Collective Aids",
+        "country": "Serbien, Bosnien und Lesvos",
+    },
+    {
+        "id": "JNRC",
+        "name": "Joel Nafuma Refugee Center",
+        "country": "Italien",
+        "region": "Rom"
+    },
+    {
+        "id": "NNK",
+        "name": "No Name Kitchen",
+        "country": "Serbien und Bosnien"
+    },
+    {
+        "id": "MRS",
+        "name": "Mobile Refugee Support",
+        "country": "Frankreich",
+        "region": "Dunkerque"
+    },
+    {
+        "id": "JA",
+        "name": "Just Action",
+        "country": "Griechenland",
+        "region": "Samos"
+    },
+    {
+        "id": "CESTR",
+        "name": "Offene Arme CESTR",
+        "country": "Griechenland",
+        "region": "Chios"
+    }
 ]
