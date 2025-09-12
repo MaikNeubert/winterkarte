@@ -1,6 +1,10 @@
-var collectionPoints = [
-    {
-        "city": "Würzburg",
+var cities = [
+  {
+    "name": "Würzburg",
+    "url": "wuerzburg",
+    "latLong": [49.79, 9.95],
+    "collectionPoints": [
+      {
         "postalCode": "97076",
         "street": "Ohmstraße",
         "house": "1",
@@ -11,46 +15,41 @@ var collectionPoints = [
         "duration": "01.10 - 30.11",
         "organization": "HERMINE e. V.",
         "name": "HERMINE e. V. Lagerhalle"
-    },
-    {
-        "city": "Würzburg",
+      },
+      {
         "latLong": [49.8008, 9.9717],
         "name": "RockInn Boulderhalle"
-    },
-    {
-        "city": "Würzburg",
+      },
+      {
         "latLong": [49.7951, 9.9405],
         "name": "KHG"
-    },
-    {
-        "city": "Dortmund",
+      }
+    ]
+  },
+  {
+    "name": "Dortmund",
+    "url": "dortmund",
+    "latLong": [51.51, 7.46],
+    "collectionPoints": [
+      {
         "latLong": [51.529124, 7.440845],
         "name": "Grenzenlose Wärme e. V."
-    },
-    {
-        "city": "Biesenthal",
+      }
+    ]
+  },
+  {
+    "name": "Biesenthal",
+    "url": "biesenthal",
+    "latLong": [52.76, 13.64],
+    "collectionPoints": [
+      {
         "latLong": [52.754285, 13.674776],
         "name": "Wir packen's an e.V."
-    },
+      }
+    ]
+  }
 ]
 
-var cities = [
-    {
-        "name": "Würzburg",
-        "url": "wuerzburg",
-        "latLong": [49.79, 9.95]
-    },
-    {
-        "name": "Dortmund",
-        "url": "dortmund",
-        "latLong": [51.51, 7.46] 
-    },
-    {
-        "name": "Biesenthal",
-        "url": "biesenthal",
-        "latLong": [52.76, 13.64]
-    }
-]
 
 var organizations = [
     {
