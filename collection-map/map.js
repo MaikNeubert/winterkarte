@@ -1,7 +1,8 @@
 var urlParams = new URLSearchParams(window.location.search);
 var collectionPointMarker = L.icon({
-    iconUrl: 'images/collection-point.avif',
-    iconSize: [32, 48],
+    iconUrl: 'images/collection-point.svg',
+    className: 'pincolor01',
+    iconSize: [48, 48],
     iconAnchor: [16, 48],
     popupAnchor: [0, -48]
 });
@@ -55,8 +56,13 @@ if (viewerLocation === 'germany' || viewerCity === undefined) {
 
     for (let city of cities) {
         let li = document.createElement('li');
-        li.innerHTML = `<a href="index.html?location=${city.url}"><b>${city.name}</b></a> 
-                        (${city.collectionPoints.length} Sammelstellen)`;
+        li.innerHTML = `
+                <div class="cities"><a href="index.html?location=${city.url}"><b>${city.name}</b></a> </div>
+                <div style="display: grid; grid-template-columns: 130px auto">
+                    <img src="images/Strich.svg" width="100" height="50" style="transform: translate(20px)" />
+                    <div style="transform: translate(0, 20px)">${city.collectionPoints.length} Sammelstellen</div>
+                </div>
+            `;
         ul.appendChild(li);
     }
 

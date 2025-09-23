@@ -82,6 +82,132 @@ var cities = [
         ]
       }
     ]
+  },
+  {
+    "name": "Leipzig",
+    "url": "leipzig",
+    "latLong": [51.3396, 12.3730],
+    "collectionPoints": [
+      {
+        "name": "Cafe Später Vogel",
+        "organization": "Projekt Elpida",
+        "address": {
+          "street": "Kolonnadenstraße",
+          "house": "5/7",
+          "postalCode": "04109"
+        },
+        "latLong": [51.337984, 12.367241],
+        "openingHours": [
+          { "day": "Monday-Friday", "times": ["10:00-20:00"] },
+          { "day": "Saturday-Sunday", "times": ["09:00-20:00"] }
+        ]
+      },
+      {
+        "name": "Vary",
+        "organization": "Projekt Elpida",
+        "address": {
+          "street": "Eisenbahnstraße",
+          "house": "7",
+          "postalCode": "04315"
+        },
+        "latLong": [51.34539, 12.40867],
+        "openingHours": [
+          { "day": "Monday-Friday", "times": ["10:00-19:00"] },
+          { "day": "Saturday-Sunday", "times": ["11:00-19:00"] }
+        ]
+      },
+      {
+        "name": "Lixer",
+        "organization": "Projekt Elpida",
+        "address": {
+          "street": "Pörstener Str.",
+          "house": "9",
+          "postalCode": "04229"
+        },
+        "latLong": [51.312987, 12.323896],
+        "openingHours": [
+          { "day": "Saturday-Sunday", "times": ["11:00-19:00"] }
+        ]
+      },
+      {
+        "name": "Cafe Drei der Münze",
+        "organization": "Projekt Elpida",
+        "address": {
+          "street": "Münzgasse",
+          "house": "28",
+          "postalCode": "04107"
+        },
+        "latLong": [51.331687, 12.372144],
+        "openingHours": [
+          { "day": "Tuesday", "times": ["11:00-18:00"] },
+          { "day": "Wednesday-Friday", "times": ["11:00-22:00"] },
+          { "day": "Saturday", "times": ["12:00-00:00"] }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Berlin",
+    "url": "berlin",
+    "latLong": [52.52, 13.405],
+    "collectionPoints": [
+      {
+        "name": "SG GM/BTSV 1850 Heimspiele Oktober / November",
+        "organization": "Projekt Elpida",
+        "address": {
+          "street": "Siemensstraße",
+          "house": "20 A",
+          "postalCode": "10551"
+        },
+        "latLong": [52.533355, 13.338357 ],
+        "openingHours": [
+          { "day": "4.10.", "times": [] },
+          { "day": "8.11.", "times": [] },
+          { "day": "28.11.", "times": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vaihingen an der Enz",
+    "url": "vaihingen-enz",
+    "latLong": [48.933, 8.957],
+    "collectionPoints": [
+      {
+        "name": "AK Asyl Vaihingen an der Enz",
+        "organization": "AK Asyl Vaihingen/E",
+        "address": {
+          "street": "Friedrichstr.",
+          "house": "3",
+          "postalCode": "71665"
+        },
+        "latLong": [48.93451, 8.957622],
+        "openingHours": [
+          { "day": "Friday 10.10.", "times": ["14:00-18:00"] },
+          { "day": "Saturday 11.10.", "times": ["11:00-17:00"] }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Köln",
+    "url": "koeln",
+    "latLong": [50.9381, 6.96],
+    "collectionPoints": [
+      {
+        "name": "Cologne Cares e. V.",
+        "organization": "Cologne Cares e. V.",
+        "address": {
+          "street": "Neusser Platz",
+          "house": "8",
+          "postalCode": "50670"
+        },
+        "latLong": [50.954564 ,  6.95797],
+        "openingHours": [
+          { "day": "Sunday 26.10.", "times": ["13:00-16:00"] }
+        ]
+      }
+    ]
   }
 ];
 
@@ -103,7 +229,7 @@ var organizations = [
         "supportedOrganisations": ["RWC", "SV", "JA", "CA", "NNK", "MRS"],
     },
     {
-        "name": "Elpida",
+        "name": "Projekt Elpida",
         "citires": ["Leipzig", "Berlin"],
         "supportedOrganisations": ["SV"]
     }

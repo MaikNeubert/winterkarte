@@ -1,0 +1,67 @@
+body {
+    background-color: #29235C;
+    color: white;
+    font-family: altehaas;
+}
+
+h1, h2 {
+    color: #facdbd;
+    font-family: altehaas;
+    font-size: xx-large;
+}
+
+#map-overview-container {
+    margin: 10px auto;
+}
+
+#map {
+    margin: auto;
+    height: 400px;
+    width: 600px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.cities a {
+    color: white;
+    font-style: unset;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+    #map-overview-container {
+        width: 80%;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 25px;
+    }
+
+    #map {
+        height: 600px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #map {
+        width: 900px;
+    }
+}
+
+@font-face {
+    font-family: 'altehaas';
+    src: url('fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'altehaas-bold';
+    src: url('fonts/AlteHaasGroteskBold.ttf') format('truetype');
+}
