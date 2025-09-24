@@ -4,25 +4,36 @@ body {
     font-family: altehaas;
 }
 
-h1,
-h2 {
+h1 {
     color: #facdbd;
     font-family: altehaas;
     font-size: xx-large;
 }
 
-#map-overview-container {
-    margin: 10px auto;
+h2 {
+    color: #facdbd;
+    font-family: altehaas;
+    font-size: x-large;
 }
 
-#organizations {
-    margin: 20px;
+h3 {
+    color: #facdbd;
+    font-family: altehaas;
+    font-size: x-large;
+    margin-top: 40px;
 }
 
-#map {
-    margin: auto;
-    height: 400px;
-    width: 600px;
+h4,
+h5 {
+    color: #facdbd;
+    margin-top: 20px;
+    font-family: altehaas;
+}
+
+a {
+    color: #facdbd;
+    font-style: unset;
+    text-decoration: none;
 }
 
 li {
@@ -47,20 +58,6 @@ li {
 header {
     text-align: center;
     margin-bottom: 40px;
-}
-
-h3 {
-    color: #facdbd;
-    font-family: altehaas-bold;
-    font-size: x-large;
-    margin-top: 40px;
-}
-
-h4,
-h5 {
-    color: #facdbd;
-    margin-top: 20px;
-    font-family: altehaas;
 }
 
 p {
@@ -104,6 +101,37 @@ section {
     margin-bottom: 40px;
 }
 
+    nav {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-family: altehaas-bold;
+      font-size: 1.2em;
+      transition: color 0.2s, border-bottom 0.2s;
+      padding-bottom: 3px;
+    }
+
+    nav a:hover {
+      color: #facdbd;
+      border-bottom: 2px solid #facdbd;
+    }
+
+    nav a.active {
+      color: #facdbd;
+      border-bottom: 2px solid #facdbd;
+    }
+
 @media screen and (min-width: 1024px) {
     #map-overview-container {
         width: 80%;
@@ -118,7 +146,20 @@ section {
     }
 }
 
-@media screen and (min-width: 1600px) {}
+#map-overview-container {
+    margin: 10px auto;
+}
+
+#organizations {
+    margin: 20px;
+}
+
+#map {
+    margin: auto;
+    height: 400px;
+    width: 600px;
+}
+
 
 @font-face {
     font-family: 'altehaas';
