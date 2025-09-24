@@ -29,6 +29,7 @@ if (viewerLocation === 'germany' || viewerCity === undefined) {
 }
 
 let map = L.map('map').setView(viewCoordinates, zoom);
+
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -71,68 +72,65 @@ if (viewerLocation === 'germany' || viewerCity === undefined) {
 
     orgElement.appendChild(ul);
 } else {
-// Sammelstellen-Ansicht
-orgElement.innerHTML = `<h2>Sammelstellen in ${viewerCity.name}</h2>`;
-let ul = document.createElement('ul');
+    // Sammelstellen-Ansicht
+    orgElement.innerHTML = `<h2>Sammelstellen in ${viewerCity.name}</h2>`;
+    let ul = document.createElement('ul');
 
-for (let cp of viewerCity.collectionPoints) {
-    let marker = L.marker(cp.latLong ?? viewerCity.latLong, { icon: collectionPointMarker }).addTo(map);
+    for (let cp of viewerCity.collectionPoints) {
+        let marker = L.marker(cp.latLong ?? viewerCity.latLong, { icon: collectionPointMarker }).addTo(map);
 
-    let popupContent = `<b>${cp.name}</b>`;
-    if (cp.organization) popupContent += `<br>${cp.organization}`;
-    if (cp.openingHours) popupContent += `<br>${formatOpeningHours(cp.openingHours)}`;
-    if (cp.duration) popupContent += `<br>${formatDuration(cp.duration)}`;
-    marker.bindPopup(popupContent);
+        let popupContent = `<b>${cp.name}</b>`;
+        if (cp.organization) popupContent += `<br>${cp.organization}`;
+        if (cp.openingHours) popupContent += `<br>${formatOpeningHours(cp.openingHours)}`;
+        if (cp.duration) popupContent += `<br>${formatDuration(cp.duration)}`;
+        marker.bindPopup(popupContent);
 
-    // Liste
-    let li = document.createElement('li');
-    li.style.marginTop = "20px";
-    li.innerHTML = `<b>${cp.name}</b>`;
-    if (cp.organization) li.innerHTML += `<br>${cp.organization}`;
-    if (cp.openingHours) li.innerHTML += `<br>${formatOpeningHours(cp.openingHours)}`;
-    if (cp.duration) li.innerHTML += `<br>${formatDuration(cp.duration)}`;
+        // Liste
+        let li = document.createElement('li');
+        li.style.marginTop = "20px";
+        li.innerHTML = `<b>${cp.name}</b>`;
+        if (cp.organization) li.innerHTML += `<br>${cp.organization}`;
+        if (cp.openingHours) li.innerHTML += `<br>${formatOpeningHours(cp.openingHours)}`;
+        if (cp.duration) li.innerHTML += `<br>${formatDuration(cp.duration)}`;
 
-    if (cp.organization) {
-        let targets = getSupportedOrganisations(cp.organization);
-        if (targets.length > 0) {
-            li.innerHTML += `<br><b>Spendenziele:</b><ul>`;
-            li.innerHTML += targets.map(t => `<li>${t.name} (${t.country}${t.region ? ', ' + t.region : ''})</li>`).join('');
-            li.innerHTML += `</ul>`;
+        if (cp.organization) {
+            let targets = getSupportedOrganisations(cp.organization);
+            if (targets.length > 0) {
+                li.innerHTML += `<br><b>Spendenziele:</b><ul>`;
+                li.innerHTML += targets.map(t => `<li>${t.name} (${t.country}${t.region ? ', ' + t.region : ''})</li>`).join('');
+                li.innerHTML += `</ul>`;
+            }
         }
+
+        ul.appendChild(li);
     }
 
-    ul.appendChild(li);
+    orgElement.appendChild(ul);
 }
-
-orgElement.appendChild(ul);
-}
-
-var numberofevents = 0;
-var debounced = 0;
 
 function debounce(callback, delay = 20) {
-  let time;
+    let time;
 
-  return (...args) => {
-    clearTimeout(time);
-    time = setTimeout(() => {
-        callback(...args);
-    }, delay);
-  };
+    return (...args) => {
+        clearTimeout(time);
+        time = setTimeout(() => {
+            callback(...args);
+        }, delay);
+    };
 }
 
 const resizeMap = debounce(() => {
-    console.log("resizemap");
     if (window.innerWidth < 1024) {
         document.getElementById("map").style.width = window.innerWidth - 20 + "px";
     } else {
         document.getElementById("map").style.width = window.innerWidth / 2 + "px";
     }
+    document.getElementById("map").style.height = window.innerHeight / 1.5 + "px";
+
+    map.invalidateSize(true);
 });
 
-addEventListener("resize", (event) =>{
-    console.log(numberofevents);
+addEventListener("resize", (event) => {
     resizeMap();
-})
-
+});
 resizeMap();
