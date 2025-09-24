@@ -20,14 +20,17 @@ let viewCoordinates, zoom;
 if (viewerLocation === 'germany' || viewerCity === undefined) {
     viewCoordinates = [51.1, 10.34];
     zoom = 6;
+    maxZoom = 8;
+
 } else {
     viewCoordinates = viewerCity.latLong;
     zoom = 13;
+    maxZoom = 19;
 }
 
 let map = L.map('map').setView(viewCoordinates, zoom);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
+    maxZoom,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
@@ -103,3 +106,33 @@ for (let cp of viewerCity.collectionPoints) {
 
 orgElement.appendChild(ul);
 }
+
+var numberofevents = 0;
+var debounced = 0;
+
+function debounce(callback, delay = 20) {
+  let time;
+
+  return (...args) => {
+    clearTimeout(time);
+    time = setTimeout(() => {
+        callback(...args);
+    }, delay);
+  };
+}
+
+const resizeMap = debounce(() => {
+    console.log("resizemap");
+    if (window.innerWidth < 1024) {
+        document.getElementById("map").style.width = window.innerWidth - 20 + "px";
+    } else {
+        document.getElementById("map").style.width = window.innerWidth / 2 + "px";
+    }
+});
+
+addEventListener("resize", (event) =>{
+    console.log(numberofevents);
+    resizeMap();
+})
+
+resizeMap();
