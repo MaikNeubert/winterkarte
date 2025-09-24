@@ -4,7 +4,8 @@ body {
     font-family: altehaas;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: #facdbd;
     font-family: altehaas;
     font-size: xx-large;
@@ -34,6 +35,74 @@ li {
     text-decoration: none;
 }
 
+#content-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    color: #facdbd;
+    font-family: altehaas-bold;
+    font-size: x-large;
+    margin-top: 40px;
+}
+
+h4,
+h5 {
+    color: #facdbd;
+    margin-top: 20px;
+    font-family: altehaas;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin: 10px 0 20px 20px;
+    padding: 0;
+}
+
+ul li::before {
+    content: "✦ ";
+    color: #facdbd;
+}
+
+details {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #facdbd;
+    margin-bottom: 10px;
+}
+
+#map-overview-container {
+    margin-top: 40px;
+}
+
+strong {
+    color: #facdbd;
+}
+
+section {
+    margin-bottom: 40px;
+}
 
 @media screen and (min-width: 1024px) {
     #map-overview-container {
@@ -49,9 +118,7 @@ li {
     }
 }
 
-@media screen and (min-width: 1600px) {
-
-}
+@media screen and (min-width: 1600px) {}
 
 @font-face {
     font-family: 'altehaas';
