@@ -1,3 +1,24 @@
+footer {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px 30px;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer a {
+  color: #facdbd;
+  text-decoration: none;
+  font-family: altehaas-bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
 body {
     background-color: #29235C;
     color: white;
@@ -33,11 +54,7 @@ h5 {
 a {
     color: #facdbd;
     font-style: unset;
-    text-decoration: none;
-}
-
-li {
-    list-style-type: none;
+    text-decoration: underline;
 }
 
 .cities a {
@@ -70,10 +87,20 @@ ul {
     padding: 0;
 }
 
+li {
+    list-style: none;
+}
+
+
 ul li::before {
     content: "✦ ";
     color: #facdbd;
 }
+
+#organizations li:before {
+    content: "";
+}
+
 
 details {
     background-color: rgba(255, 255, 255, 0.08);

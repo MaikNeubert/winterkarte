@@ -125,7 +125,13 @@ const resizeMap = debounce(() => {
     } else {
         document.getElementById("map").style.width = window.innerWidth / 2 + "px";
     }
-    document.getElementById("map").style.height = window.innerHeight / 1.5 + "px";
+    const maxHeight = 600;
+    if (window.innerHeight / 1.5 < maxHeight) {
+        document.getElementById("map").style.height = window.innerHeight / 1.5 + "px";
+    } else {
+        document.getElementById("map").style.height = maxHeight + "px";
+    }
+
 
     map.invalidateSize(true);
 });
