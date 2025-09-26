@@ -40,8 +40,8 @@ var cities = [
           { "day": "Montag", "times": ["12:00-23:00"] },
           { "day": "Dienstag", "times": ["09:00-23:00"] },
           { "day": "Mittwoch", "times": ["12:00-23:00"] },
-          { "day": "Donnerstag", "times": ["09:00-12:00"] },
-          { "day": "Freitag", "times": ["12:00-12:00"] },
+          { "day": "Donnerstag", "times": ["09:00-23:00"] },
+          { "day": "Freitag", "times": ["12:00-23:00"] },
           { "day": "Samstag-Sonntag", "times": ["09:00-23:00"] }
         ]
       },
@@ -301,7 +301,7 @@ var organizations = [
   {
     "name": "Grenzenlose Wärme e. V.",
     "cities": ["Dortmund"],
-    "supportedOrganisations": ["RWC"],
+    "supportedOrganisations": ["RWC", "MRS"],
   },
   {
     "name": "Wir packen's an e. V.",
