@@ -36,13 +36,29 @@ var cities = [
         "latLong": [49.8008, 9.9717],
         "name": "RockInn Boulderhalle",
         "organization": "HERMINE e. V."
+      },
+      {
+        "name": "KiTa Abenteuerland Rottenbauer",
+        "organization": "HERMINE e. V.",
+        "address": { "street": "Unterer Kirchplatz", "house": "2a", "postalCode": "97084" },
+        "latLong": [49.72033, 9.96718],
+        "openingHours": [{ "day": "Mo-Do", "times": ["14:00-16:00"] }]
+      },
+      {
+        "name": "Cairo",
+        "organization": "HERMINE",
+        "address": { "street": "Fred-Joseph-Platz", "house": "3", "postalCode": "97082" },
+        "latLong": [49.78963, 9.92469],
+        "openingHours": [
+          { "day": "Mo-Do", "times": ["15:00-21:00"] }
+        ]
       }
     ]
   },
   {
     "name": "Dortmund",
     "url": "dortmund",
-    "latLong": [51.51, 7.46],
+    "latLong": [51.53, 7.46],
     "collectionPoints": [
       {
         "name": "Grenzenlose Wärme e. V.",
@@ -75,10 +91,7 @@ var cities = [
         },
         "latLong": [52.754285, 13.674776],
         "openingHours": [
-          { "day": "Wednesday", "times": [] },
-          { "day": "Friday", "times": [] },
-          { "day": "Saturday", "times": [] },
-          { "day": "On Request", "times": [] }
+          { "day": "Montag-Sonntag", "times": ["0-24"] },
         ]
       }
     ]
@@ -86,11 +99,11 @@ var cities = [
   {
     "name": "Leipzig",
     "url": "leipzig",
-    "latLong": [51.3396, 12.3730],
+    "latLong": [51.3310, 12.3730],
     "collectionPoints": [
       {
         "name": "Cafe Später Vogel",
-        "organization": "Projekt Elpida",
+        "organization": "Project Elpida",
         "address": {
           "street": "Kolonnadenstraße",
           "house": "5/7",
@@ -103,22 +116,8 @@ var cities = [
         ]
       },
       {
-        "name": "Vary",
-        "organization": "Projekt Elpida",
-        "address": {
-          "street": "Eisenbahnstraße",
-          "house": "7",
-          "postalCode": "04315"
-        },
-        "latLong": [51.34539, 12.40867],
-        "openingHours": [
-          { "day": "Monday-Friday", "times": ["10:00-19:00"] },
-          { "day": "Saturday-Sunday", "times": ["11:00-19:00"] }
-        ]
-      },
-      {
         "name": "Lixer",
-        "organization": "Projekt Elpida",
+        "organization": "Project Elpida",
         "address": {
           "street": "Pörstener Str.",
           "house": "9",
@@ -131,7 +130,7 @@ var cities = [
       },
       {
         "name": "Cafe Drei der Münze",
-        "organization": "Projekt Elpida",
+        "organization": "Project Elpida",
         "address": {
           "street": "Münzgasse",
           "house": "28",
@@ -143,6 +142,37 @@ var cities = [
           { "day": "Wednesday-Friday", "times": ["11:00-22:00"] },
           { "day": "Saturday", "times": ["12:00-00:00"] }
         ]
+      },
+      {
+        "name": "Patina 45",
+        "organization": "Project Elpida",
+        "address": { "street": "Rabet", "house": "15", "postalCode": "04315" },
+        "latLong": [51.34340, 12.40256],
+        "openingHours": [
+          { "day": "Mon-Thu", "times": ["16:00-22:00"] },
+          { "day": "Fri", "times": ["16:00-00:00"] },
+          { "day": "Sat-Sun", "times": ["14:00-22:00"] }
+        ]
+      },
+      {
+        "name": "Simini",
+        "organization": "Project Elpida",
+        "address": { "street": "Eisenbahnstraße", "house": "109", "postalCode": "04315" },
+        "latLong": [51.34540, 12.41130],
+        "openingHours": [
+          { "day": "Sun-Tue", "times": ["12:00-19:00"] },
+          { "day": "Thu-Sat", "times": ["12:00-00:00"] }
+        ]
+      },
+      {
+        "name": "Vleischerei",
+        "organization": "Project Elpida",
+        "address": { "street": "Eisenbahnstraße", "house": "128", "postalCode": "04315" },
+        "latLong": [51.34505, 12.41243],
+        "openingHours": [
+          { "day": "Tue-Fri", "times": ["17:00-22:00"] },
+          { "day": "Sat-Sun", "times": ["12:00-22:00"] }
+        ]
       }
     ]
   },
@@ -153,18 +183,46 @@ var cities = [
     "collectionPoints": [
       {
         "name": "SG GM/BTSV 1850 Heimspiele Oktober / November",
-        "organization": "Projekt Elpida",
+        "organization": "Project Elpida",
         "address": {
           "street": "Siemensstraße",
           "house": "20 A",
           "postalCode": "10551"
         },
-        "latLong": [52.533355, 13.338357 ],
+        "latLong": [52.533355, 13.338357],
         "openingHours": [
           { "day": "4.10.", "times": [] },
           { "day": "8.11.", "times": [] },
           { "day": "28.11.", "times": [] }
         ]
+      },
+      {
+        "name": "Kuckucksei",
+        "organization": "Project Elpida",
+        "address": { "street": "Barbarossastraße", "house": "5a", "postalCode": "10781" },
+        "latLong": [52.49211, 13.35233],
+        "openingHours": [{ "day": "Mo-So", "times": ["17:00-03:00"] }]
+      },
+      {
+        "name": "EWA Frauenzentrum",
+        "organization": "Project Elpida",
+        "address": { "street": "Prenzlauer Allee", "house": "6", "postalCode": "10405" },
+        "latLong": [52.52942, 13.41848],
+        "openingHours": [{ "day": "Mo-Thu", "times": ["11:00-19:00"] }]
+      },
+      {
+        "name": "AWO Begegnungszentrum",
+        "organization": "Project Elpida",
+        "address": { "street": "Adalbertstraße", "house": "23a", "postalCode": "10997" },
+        "latLong": [52.50379, 13.42148],
+        "openingHours": [{ "day": "Mo-Fr", "times": ["09:00-15:00"] }]
+      },
+      {
+        "name": "Bibliothek Tiergarten-Süd",
+        "organization": "Project Elpida",
+        "address": { "street": "Lützowstraße", "house": "27", "postalCode": "10785" },
+        "latLong": [52.50375, 13.36342],
+        "openingHours": [{ "day": "Mo-Fr", "times": ["12:30-18:00"] }]
       }
     ]
   },
@@ -202,10 +260,24 @@ var cities = [
           "house": "8",
           "postalCode": "50670"
         },
-        "latLong": [50.954564 ,  6.95797],
+        "latLong": [50.954564, 6.95797],
         "openingHours": [
           { "day": "Sunday 26.10.", "times": ["13:00-16:00"] }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Herzogenaurach",
+    "url": "herzogenaurach",
+    "latLong": [49.567, 10.885],
+    "collectionPoints": [
+      {
+        "name": "Herzo Packt an e.V. Scheune",
+        "organization": "Herzo Packt an e.V.",
+        "address": { "street": "Eichelmühlgasse", "house": "24", "postalCode": "91074" },
+        "latLong": [49.566, 10.89332],
+        "openingHours": []
       }
     ]
   }
@@ -213,73 +285,83 @@ var cities = [
 
 
 var organizations = [
-    {
-        "name": "HERMINE e. V.",
-        "cities": ["Würzburg"],
-        "supportedOrganisations": ["RWC", "SV", "CA", "JNRC"],
-    },
-    {
-        "name": "Grenzenlose Wärme e. V.",
-        "cities": ["Dortmund"],
-        "supportedOrganisations": ["RWC"],
-    },
-        {
-        "name": "Wir packen's an e. V.",
-        "cities": ["Biesenthal"],
-        "supportedOrganisations": ["RWC", "SV", "JA", "CA", "NNK", "MRS"],
-    },
-    {
-        "name": "Projekt Elpida",
-        "citires": ["Leipzig", "Berlin"],
-        "supportedOrganisations": ["SV"]
-    }
+  {
+    "name": "HERMINE e. V.",
+    "cities": ["Würzburg"],
+    "supportedOrganisations": ["RWC", "SV", "CA", "JNRC"],
+  },
+  {
+    "name": "Grenzenlose Wärme e. V.",
+    "cities": ["Dortmund"],
+    "supportedOrganisations": ["RWC"],
+  },
+  {
+    "name": "Wir packen's an e. V.",
+    "cities": ["Biesenthal"],
+    "supportedOrganisations": ["RWC", "SV", "JA", "CA", "NNK", "MRS"],
+  },
+  {
+    "name": "Project Elpida",
+    "cities": ["Leipzig", "Berlin"],
+    "supportedOrganisations": ["SV"]
+  },
+  {
+    "name": "AK Asyl Vaihingen",
+    "cities": ["Vaihingen an der Enz"],
+    "supportedOrganisations": ["SV"]
+  },
+  {
+    "name": "Cologne Cares e.V.",
+    "cities": ["Köln"],
+    "supportedOrganisations": ["SV"]
+  },
 ]
 
 var supportedOrganisations = [
-    {
-        "id": "RWC",
-        "name": "Refugee Woman Center",
-        "country": "Frankreich",
-        "region": "Calais"
-    },
-    {
-        "id": "SV",
-        "name": "Samos Volunteers",
-        "country": "Griechenland",
-        "region": "Samos"
-    },
-    {
-        "id": "CA",
-        "name": "Collective Aids",
-        "country": "Serbien, Bosnien und Lesvos",
-    },
-    {
-        "id": "JNRC",
-        "name": "Joel Nafuma Refugee Center",
-        "country": "Italien",
-        "region": "Rom"
-    },
-    {
-        "id": "NNK",
-        "name": "No Name Kitchen",
-        "country": "Serbien und Bosnien"
-    },
-    {
-        "id": "MRS",
-        "name": "Mobile Refugee Support",
-        "country": "Frankreich",
-        "region": "Dunkerque"
-    },
-    {
-        "id": "JA",
-        "name": "Just Action",
-        "country": "Griechenland",
-        "region": "Samos"
-    },
-    {
-        "id": "CESTR",
-        "name": "Offene Arme CESTR",
-        "country": "Griechenland",
-        "region": "Chios"
-    }
+  {
+    "id": "RWC",
+    "name": "Refugee Woman Center",
+    "country": "Frankreich",
+    "region": "Calais"
+  },
+  {
+    "id": "SV",
+    "name": "Samos Volunteers",
+    "country": "Griechenland",
+    "region": "Samos"
+  },
+  {
+    "id": "CA",
+    "name": "Collective Aids",
+    "country": "Serbien, Bosnien und Lesvos",
+  },
+  {
+    "id": "JNRC",
+    "name": "Joel Nafuma Refugee Center",
+    "country": "Italien",
+    "region": "Rom"
+  },
+  {
+    "id": "NNK",
+    "name": "No Name Kitchen",
+    "country": "Serbien und Bosnien"
+  },
+  {
+    "id": "MRS",
+    "name": "Mobile Refugee Support",
+    "country": "Frankreich",
+    "region": "Dunkerque"
+  },
+  {
+    "id": "JA",
+    "name": "Just Action",
+    "country": "Griechenland",
+    "region": "Samos"
+  },
+  {
+    "id": "CESTR",
+    "name": "Offene Arme CESTR",
+    "country": "Griechenland",
+    "region": "Chios"
+  }
 ]
