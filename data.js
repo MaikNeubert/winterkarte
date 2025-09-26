@@ -14,7 +14,7 @@ var cities = [
         },
         "latLong": [49.7974, 9.9708],
         "openingHours": [
-          { "day": "Sunday", "times": ["12:00-18:00"] }
+          { "day": "Sonntag", "times": ["12:00-18:00"] }
         ]
       },
       {
@@ -27,22 +27,30 @@ var cities = [
         },
         "latLong": [49.7951, 9.9405],
         "openingHours": [
-          { "day": "Monday", "times": ["09:00-12:00", "14:00-16:00"] },
-          { "day": "Tuesday", "times": ["09:00-12:00", "14:00-16:00"] },
-          { "day": "Wednesday", "times": ["09:00-12:00", "14:00-16:00"] }
+          { "day": "Montag", "times": ["09:00-12:00", "14:00-16:00"] },
+          { "day": "Dienstag", "times": ["09:00-12:00", "14:00-16:00"] },
+          { "day": "Mittwoch", "times": ["09:00-12:00", "14:00-16:00"] }
         ]
       },
       {
         "latLong": [49.8008, 9.9717],
         "name": "RockInn Boulderhalle",
-        "organization": "HERMINE e. V."
+        "organization": "HERMINE e. V.",
+        "openingHours": [
+          { "day": "Montag", "times": ["12:00-23:00"] },
+          { "day": "Dienstag", "times": ["09:00-23:00"] },
+          { "day": "Mittwoch", "times": ["12:00-23:00"] },
+          { "day": "Donnerstag", "times": ["09:00-12:00"] },
+          { "day": "Freitag", "times": ["12:00-12:00"] },
+          { "day": "Samstag-Sonntag", "times": ["09:00-23:00"] }
+        ]
       },
       {
         "name": "KiTa Abenteuerland Rottenbauer",
         "organization": "HERMINE e. V.",
         "address": { "street": "Unterer Kirchplatz", "house": "2a", "postalCode": "97084" },
         "latLong": [49.72033, 9.96718],
-        "openingHours": [{ "day": "Mo-Do", "times": ["14:00-16:00"] }]
+        "openingHours": [{ "day": "Montag-Donnerstag", "times": ["14:00-16:00"] }]
       },
       {
         "name": "Cairo",
@@ -50,7 +58,7 @@ var cities = [
         "address": { "street": "Fred-Joseph-Platz", "house": "3", "postalCode": "97082" },
         "latLong": [49.78963, 9.92469],
         "openingHours": [
-          { "day": "Mo-Do", "times": ["15:00-21:00"] }
+          { "day": "Montag-Donnerstag", "times": ["15:00-21:00"] }
         ]
       }
     ]
@@ -70,8 +78,8 @@ var cities = [
         },
         "latLong": [51.529124, 7.440845],
         "openingHours": [
-          { "day": "Thursday", "times": ["17:00-20:00"] },
-          { "day": "On Request", "times": [] }
+          { "day": "Donnerstag", "times": ["17:00-20:00"] },
+          { "day": "Auf Anfrage", "times": [] }
         ]
       }
     ]
@@ -111,8 +119,8 @@ var cities = [
         },
         "latLong": [51.337984, 12.367241],
         "openingHours": [
-          { "day": "Monday-Friday", "times": ["10:00-20:00"] },
-          { "day": "Saturday-Sunday", "times": ["09:00-20:00"] }
+          { "day": "Montag-Freitag", "times": ["10:00-20:00"] },
+          { "day": "Samstag-Sonntag", "times": ["09:00-20:00"] }
         ]
       },
       {
@@ -125,7 +133,7 @@ var cities = [
         },
         "latLong": [51.312987, 12.323896],
         "openingHours": [
-          { "day": "Saturday-Sunday", "times": ["11:00-19:00"] }
+          { "day": "Samstag-Sonntag", "times": ["11:00-19:00"] }
         ]
       },
       {
@@ -138,9 +146,9 @@ var cities = [
         },
         "latLong": [51.331687, 12.372144],
         "openingHours": [
-          { "day": "Tuesday", "times": ["11:00-18:00"] },
-          { "day": "Wednesday-Friday", "times": ["11:00-22:00"] },
-          { "day": "Saturday", "times": ["12:00-00:00"] }
+          { "day": "Dienstag", "times": ["11:00-18:00"] },
+          { "day": "Mittwoch-Freitag", "times": ["11:00-22:00"] },
+          { "day": "Samstag", "times": ["12:00-00:00"] }
         ]
       },
       {
@@ -149,9 +157,9 @@ var cities = [
         "address": { "street": "Rabet", "house": "15", "postalCode": "04315" },
         "latLong": [51.34340, 12.40256],
         "openingHours": [
-          { "day": "Mon-Thu", "times": ["16:00-22:00"] },
-          { "day": "Fri", "times": ["16:00-00:00"] },
-          { "day": "Sat-Sun", "times": ["14:00-22:00"] }
+          { "day": "Mo-Do", "times": ["16:00-22:00"] },
+          { "day": "Fr", "times": ["16:00-00:00"] },
+          { "day": "Sa-So", "times": ["14:00-22:00"] }
         ]
       },
       {
@@ -160,8 +168,8 @@ var cities = [
         "address": { "street": "Eisenbahnstraße", "house": "109", "postalCode": "04315" },
         "latLong": [51.34540, 12.41130],
         "openingHours": [
-          { "day": "Sun-Tue", "times": ["12:00-19:00"] },
-          { "day": "Thu-Sat", "times": ["12:00-00:00"] }
+          { "day": "Sonntag-Dienstag", "times": ["12:00-19:00"] },
+          { "day": "Donnerstag-Samstag", "times": ["12:00-00:00"] }
         ]
       },
       {
@@ -170,8 +178,8 @@ var cities = [
         "address": { "street": "Eisenbahnstraße", "house": "128", "postalCode": "04315" },
         "latLong": [51.34505, 12.41243],
         "openingHours": [
-          { "day": "Tue-Fri", "times": ["17:00-22:00"] },
-          { "day": "Sat-Sun", "times": ["12:00-22:00"] }
+          { "day": "Dienstag-Freitag", "times": ["17:00-22:00"] },
+          { "day": "Samstag-Sonntag", "times": ["12:00-22:00"] }
         ]
       }
     ]
@@ -208,7 +216,7 @@ var cities = [
         "organization": "Project Elpida",
         "address": { "street": "Prenzlauer Allee", "house": "6", "postalCode": "10405" },
         "latLong": [52.52942, 13.41848],
-        "openingHours": [{ "day": "Mo-Thu", "times": ["11:00-19:00"] }]
+        "openingHours": [{ "day": "Mo-Do", "times": ["11:00-19:00"] }]
       },
       {
         "name": "AWO Begegnungszentrum",
@@ -241,8 +249,8 @@ var cities = [
         },
         "latLong": [48.93451, 8.957622],
         "openingHours": [
-          { "day": "Friday 10.10.", "times": ["14:00-18:00"] },
-          { "day": "Saturday 11.10.", "times": ["11:00-17:00"] }
+          { "day": "Freitag 10.10.", "times": ["14:00-18:00"] },
+          { "day": "Samstag 11.10.", "times": ["11:00-17:00"] }
         ]
       }
     ]
@@ -262,7 +270,7 @@ var cities = [
         },
         "latLong": [50.954564, 6.95797],
         "openingHours": [
-          { "day": "Sunday 26.10.", "times": ["13:00-16:00"] }
+          { "day": "Sonntag 26.10.", "times": ["13:00-16:00"] }
         ]
       }
     ]
