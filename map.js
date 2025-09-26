@@ -60,11 +60,12 @@ if (viewerLocation === 'germany' || viewerCity === undefined) {
 
     for (let city of cities) {
         let li = document.createElement('li');
+        let sammelstellen = city.collectionPoints.length > 1 ? "Sammelstellen" : "Sammelstelle";
         li.innerHTML = `
                 <div class="cities"><a href="index.html?location=${city.url}"><b>${city.name}</b></a> </div>
                 <div style="display: grid; grid-template-columns: 130px auto">
                     <img src="images/Strich.svg" width="100" height="50" style="transform: translate(20px)" />
-                    <div style="transform: translate(0, 20px)">${city.collectionPoints.length} Sammelstellen</div>
+                    <div style="transform: translate(0, 20px)">${city.collectionPoints.length} ${sammelstellen}</div>
                 </div>
             `;
         ul.appendChild(li);
@@ -74,9 +75,34 @@ if (viewerLocation === 'germany' || viewerCity === undefined) {
 } else {
     // Sammelstellen-Ansicht
     orgElement.innerHTML = `<h2>Sammelstellen in ${viewerCity.name}</h2>`;
+
+    // 1. Organisation(en) in dieser Stadt
+    let cityOrgs = organizations.filter(o => o.cities.includes(viewerCity.name));
+    if (cityOrgs.length > 0) {
+        orgElement.innerHTML += `<h4>Organisationen:</h4><ul>` +
+            cityOrgs.map(o => `<li>${o.name}</li>`).join('') +
+            `</ul>`;
+    }
+
+    // 2. Unterstützte Organisationen (Spendenziele)
+    let supported = [];
+    for (let org of cityOrgs) {
+        let targets = getSupportedOrganisations(org.name);
+        supported.push(...targets);
+    }
+    supported = [...new Set(supported)]; // Duplikate entfernen
+    if (supported.length > 0) {
+        orgElement.innerHTML += `<h4>Unterstützt:</h4><ul>` +
+            supported.map(t => `<li>${t.name} (${t.country}${t.region ? ', ' + t.region : ''})</li>`).join('') +
+            `</ul>`;
+    }
+
+    // 3. Sammelstellen auflisten
+    orgElement.innerHTML += `<h4>Sammelstellen:</h4>`;
     let ul = document.createElement('ul');
 
     for (let cp of viewerCity.collectionPoints) {
+        // Marker auf der Karte
         let marker = L.marker(cp.latLong ?? viewerCity.latLong, { icon: collectionPointMarker }).addTo(map);
 
         let popupContent = `<b>${cp.name}</b>`;
@@ -85,22 +111,18 @@ if (viewerLocation === 'germany' || viewerCity === undefined) {
         if (cp.duration) popupContent += `<br>${formatDuration(cp.duration)}`;
         marker.bindPopup(popupContent);
 
-        // Liste
+        // Kompakte Liste mit Details
         let li = document.createElement('li');
-        li.style.marginTop = "20px";
-        li.innerHTML = `<b>${cp.name}</b>`;
-        if (cp.organization) li.innerHTML += `<br>${cp.organization}`;
-        if (cp.openingHours) li.innerHTML += `<br>${formatOpeningHours(cp.openingHours)}`;
-        if (cp.duration) li.innerHTML += `<br>${formatDuration(cp.duration)}`;
+        li.style.marginBottom = "10px";
 
-        if (cp.organization) {
-            let targets = getSupportedOrganisations(cp.organization);
-            if (targets.length > 0) {
-                li.innerHTML += `<br><b>Spendenziele:</b><ul>`;
-                li.innerHTML += targets.map(t => `<li>${t.name} (${t.country}${t.region ? ', ' + t.region : ''})</li>`).join('');
-                li.innerHTML += `</ul>`;
-            }
-        }
+        li.innerHTML = `
+            <details style="padding: 5px; margin: 0">
+                <summary>${cp.name}</summary>
+                ${cp.address ? `<div>${cp.address.street} ${cp.address.house}, ${cp.address.postalCode}</div>` : ''}
+                ${cp.openingHours ? `<div><i>${formatOpeningHours(cp.openingHours)}</i></div>` : ''}
+                ${cp.duration ? `<div>${formatDuration(cp.duration)}</div>` : ''}
+            </details>
+        `;
 
         ul.appendChild(li);
     }
