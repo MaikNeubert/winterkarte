@@ -211,3 +211,43 @@ nav a.active {
     font-family: 'altehaas-bold';
     src: url('fonts/AlteHaasGroteskBold.ttf') format('truetype');
 }
+
+@media print {
+    body {
+        color: black;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: black;
+    }
+
+    strong {
+        color: black;
+    }
+
+    a {
+        color: blue;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #content-container {
+        box-shadow: none;
+        border: none;
+        margin: 0;
+    }
+
+    #presse-gallery {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .hide-print {
+        display: none;
+    }
+}
