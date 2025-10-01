@@ -8,6 +8,23 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+figcaption {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+figure {
+    margin: 0;
+}
+
 footer a {
   color: #facdbd;
   text-decoration: none;
@@ -77,12 +94,6 @@ header {
     margin-bottom: 40px;
 }
 
-p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
 ul {
     margin: 10px 0 20px 20px;
     padding: 0;
@@ -129,36 +140,37 @@ section {
     margin-bottom: 40px;
 }
 
-    nav {
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+nav {
+    background-color: rgba(41, 35, 92, 1);
+    padding: 15px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-family: altehaas-bold;
-      font-size: 1.2em;
-      transition: color 0.2s, border-bottom 0.2s;
-      padding-bottom: 3px;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: altehaas-bold;
+    font-size: 1.2em;
+    transition: color 0.2s, border-bottom 0.2s;
+    padding-bottom: 3px;
+}
 
-    nav a:hover {
-      color: #facdbd;
-      border-bottom: 2px solid #facdbd;
-    }
+nav a:hover {
+    color: #facdbd;
+    border-bottom: 2px solid #facdbd;
+}
 
-    nav a.active {
-      color: #facdbd;
-      border-bottom: 2px solid #facdbd;
-    }
+nav a.active {
+    color: #facdbd;
+    border-bottom: 2px solid #facdbd;
+}
 
 @media screen and (min-width: 1024px) {
     #map-overview-container {
@@ -198,4 +210,44 @@ section {
 @font-face {
     font-family: 'altehaas-bold';
     src: url('fonts/AlteHaasGroteskBold.ttf') format('truetype');
+}
+
+@media print {
+    body {
+        color: black;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: black;
+    }
+
+    strong {
+        color: black;
+    }
+
+    a {
+        color: blue;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #content-container {
+        box-shadow: none;
+        border: none;
+        margin: 0;
+    }
+
+    #presse-gallery {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .hide-print {
+        display: none;
+    }
 }

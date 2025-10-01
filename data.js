@@ -133,7 +133,7 @@ var cities = [
         },
         "latLong": [51.312987, 12.323896],
         "openingHours": [
-          { "day": "Samstag-Sonntag", "times": ["11:00-19:00"] }
+          { "day": "Öffnungszeiten", "times": ["<a href=\"https://zschocher.com/veranstaltungen/kalender\">Website</a>"] }
         ]
       },
       {
@@ -163,7 +163,7 @@ var cities = [
         ]
       },
       {
-        "name": "Simini",
+        "name": "Simmini",
         "organization": "Project Elpida",
         "address": { "street": "Eisenbahnstraße", "house": "109", "postalCode": "04315" },
         "latLong": [51.34540, 12.41130],
