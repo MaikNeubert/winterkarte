@@ -1,5 +1,125 @@
 var cities = [
   {
+    "name": "Dortmund",
+    "url": "dortmund",
+    "latLong": [51.53, 7.46],
+    "collectionPoints": [
+      {
+        "name": "Grenzenlose Wärme e. V.",
+        "organization": "Grenzenlose Wärme e. V.",
+        "address": {
+          "street": "Kanalstrasse 25, Halle 51",
+          "house": "25",
+          "postalCode": "44147"
+        },
+        "latLong": [51.529124, 7.440845],
+        "openingHours": [
+          { "day": "Donnerstag", "times": ["17:00-20:00"] },
+          { "day": "Auf Anfrage", "times": [] }
+        ]
+      }
+    ]
+  }, {
+    "name": "Biesenthal",
+    "url": "biesenthal",
+    "latLong": [52.76, 13.64],
+    "collectionPoints": [
+      {
+        "name": "Wir packen's an e. V.",
+        "organization": "Wir packen's an e. V.",
+        "address": {
+          "street": "Bahnhofstr.",
+          "house": "81 a",
+          "postalCode": "16359"
+        },
+        "latLong": [52.754285, 13.674776],
+        "openingHours": [
+          { "day": "Montag-Sonntag", "times": ["0-24"] },
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Leipzig",
+    "url": "leipzig",
+    "latLong": [51.3310, 12.3730],
+    "collectionPoints": [
+      {
+        "name": "Cafe Später Vogel",
+        "organization": "Project Elpida",
+        "address": {
+          "street": "Kolonnadenstraße",
+          "house": "5/7",
+          "postalCode": "04109"
+        },
+        "latLong": [51.337984, 12.367241],
+        "openingHours": [
+          { "day": "Montag-Freitag", "times": ["10:00-20:00"] },
+          { "day": "Samstag-Sonntag", "times": ["09:00-20:00"] }
+        ]
+      },
+      {
+        "name": "Lixer",
+        "organization": "Project Elpida",
+        "address": {
+          "street": "Pörstener Str.",
+          "house": "9",
+          "postalCode": "04229"
+        },
+        "latLong": [51.312987, 12.323896],
+        "openingHours": [
+          { "day": "Öffnungszeiten", "times": ["<a href=\"https://zschocher.com/veranstaltungen/kalender\">Website</a>"] }
+        ]
+      },
+      {
+        "name": "Cafe Drei der Münze",
+        "organization": "Project Elpida",
+        "address": {
+          "street": "Münzgasse",
+          "house": "28",
+          "postalCode": "04107"
+        },
+        "latLong": [51.331687, 12.372144],
+        "openingHours": [
+          { "day": "Dienstag", "times": ["11:00-18:00"] },
+          { "day": "Mittwoch-Freitag", "times": ["11:00-22:00"] },
+          { "day": "Samstag", "times": ["12:00-00:00"] }
+        ]
+      },
+      {
+        "name": "Patina 45",
+        "organization": "Project Elpida",
+        "address": { "street": "Rabet", "house": "15", "postalCode": "04315" },
+        "latLong": [51.34340, 12.40256],
+        "openingHours": [
+          { "day": "Mo-Do", "times": ["16:00-22:00"] },
+          { "day": "Fr", "times": ["16:00-00:00"] },
+          { "day": "Sa-So", "times": ["14:00-22:00"] }
+        ]
+      },
+      {
+        "name": "Simmini",
+        "organization": "Project Elpida",
+        "address": { "street": "Eisenbahnstraße", "house": "109", "postalCode": "04315" },
+        "latLong": [51.34540, 12.41130],
+        "openingHours": [
+          { "day": "Sonntag-Dienstag", "times": ["12:00-19:00"] },
+          { "day": "Donnerstag-Samstag", "times": ["12:00-00:00"] }
+        ]
+      },
+      {
+        "name": "Vleischerei",
+        "organization": "Project Elpida",
+        "address": { "street": "Eisenbahnstraße", "house": "128", "postalCode": "04315" },
+        "latLong": [51.34505, 12.41243],
+        "openingHours": [
+          { "day": "Dienstag-Freitag", "times": ["17:00-22:00"] },
+          { "day": "Samstag-Sonntag", "times": ["12:00-22:00"] }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Würzburg",
     "url": "wuerzburg",
     "latLong": [49.79, 9.95],
